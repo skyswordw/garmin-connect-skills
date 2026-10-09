@@ -9,7 +9,8 @@
 | 区域、profile、日期、缓存、报告防覆盖 | 本地离线回归验证；见 tests |
 | 上游登录/MFA/刷新/429 的网络请求保护 | 使用安装的库与 fake transport 验证；不等于真实 Garmin 登录 |
 | macOS arm64、Python 3.12.8 | 本机 80 项离线测试、Ruff 通过；独立临时环境的锁定源码安装与 uv tool install 通过，CLI 在仓库外执行成功 |
-| Linux / Windows | 已配置离线 CI；本轮没有独立机器或 CI 运行结果 |
+| Linux | GitHub Ubuntu CI 的 Python 3.12/3.14 各 80 项测试与 Ruff 通过；真实账号与独立用户流程未验证 |
+| Windows | GitHub CI 的 Python 3.12 为 79 项通过、1 项 POSIX 权限/符号链接测试跳过，Ruff 通过；终端认证与文件访问权限尚待实机验证 |
 | CN 首次登录、真实 MFA、自然 token 到期恢复 | 未验证；用户需在本地执行 |
 | CN 设备字段和真实 Coach/ATP/普通计划 | 未验证；异常结构会显式报错 |
 | global 账号 | 源码有区域支持与隔离测试，真实账号未验证，实验性 |
@@ -18,6 +19,8 @@
 不要把离线测试、源码存在实现、上游 issue 作者的成功或安装完成等同于线上兼容。
 
 本轮已构建 wheel 与源码包；离线 demo 核对为 3 次跑步、18.5 km、111 分钟，51 份虚构来源的内容 hash 与相对引用均通过检查。Skill frontmatter 与相对资源通过结构验证；README 横幅和大小图标已实际渲染检查。安装验证使用临时状态目录，没有访问真实账号状态。以上均为同一台 macOS 的本地验证，不算独立机器验收。
+
+2026-10-08 的 [GitHub 离线 CI](https://github.com/skyswordw/garmin-connect-skills/actions/runs/37899206396)在 commit 51d0c02 上通过全部四个任务（macOS、Ubuntu 3.12/3.14、Windows）。它验证了托管 runner 的依赖安装和 fake transport 回归，未执行真实登录或健康数据获取，不能替代用户完整流程验收。当前状态另见 [Actions](https://github.com/skyswordw/garmin-connect-skills/actions/workflows/tests.yml)。
 
 ## 0.3.17 的适配边界
 

@@ -2,11 +2,13 @@
 
 <p align="center"><strong>读懂跑步训练，也照顾每天的睡眠与恢复。</strong><br>中国区优先 · 本地轻量摘要 · 一个 Agent Skill · 中文周报</p>
 
+[![离线检查](https://github.com/skyswordw/garmin-connect-skills/actions/workflows/tests.yml/badge.svg)](https://github.com/skyswordw/garmin-connect-skills/actions/workflows/tests.yml)
+
 把 Garmin Connect 中的跑步、睡眠、HRV 和恢复指标整理成有来源、有日期、有缺失说明的小摘要，让你使用的 AI 帮忙理解训练。也可以只用命令行查询和生成中文事实周报。
 
-**当前为本地 alpha。** 默认中国区，锁定 `garminconnect 0.3.17`。本项目尚未完成真实账号的 CN 登录、MFA、Coach 与独立机器验证；离线测试和安装检查不等于线上可用。遇到不支持的设备指标会明确说明。
+**当前为 alpha 预发布版。** 默认中国区，锁定 `garminconnect 0.3.17`。macOS、Linux、Windows 离线 CI 已通过，Windows 跳过 POSIX 权限测试。本项目尚未完成真实账号的 CN 登录、MFA、Coach 与完整用户流程验证；离线测试和安装检查不等于线上可用。遇到不支持的设备指标会明确说明。
 
-[开始使用](#开始使用) · [接入你的-agent](#接入你的-agent) · [遇到问题](#遇到问题) · [开发与验证](#开发与验证)
+[开始使用](#开始使用) · [接入你的-agent](#接入你的-agent) · [遇到问题](#遇到问题) · [开发与验证](#开发与验证) · [反馈问题](https://github.com/skyswordw/garmin-connect-skills/issues)
 
 ## 能帮你做什么
 
