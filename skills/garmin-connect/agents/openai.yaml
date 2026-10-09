@@ -1,0 +1,6 @@
+interface:
+  display_name: "Garmin 跑步与恢复"
+  short_description: "按需读取佳明中国区摘要，结合跑步、睡眠和恢复记录分析训练，并生成可核对来源的中文周报。"
+  icon_small: "./assets/icon.png"
+  icon_large: "./assets/icon.svg"
+  default_prompt: "使用 $garmin-connect 分析我最近一周的跑步、睡眠和恢复，并列出数据来源及缺失项。"

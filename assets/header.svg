@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 340" fill="none" role="img" aria-labelledby="title desc">
+  <title id="title">garmin-connect-skills — Your training, in context.</title>
+  <desc id="desc">A local companion for running, sleep and recovery, designed for Garmin China accounts.</desc>
+  <rect width="1280" height="340" rx="28" fill="#F3F6F8"/>
+  <path d="M897 0H1252C1267 0 1280 13 1280 28V312C1280 327 1267 340 1252 340H897Z" fill="#E6F1ED"/>
+  <circle cx="1110" cy="176" r="132" stroke="#D1E7DF" stroke-width="2"/>
+  <circle cx="1110" cy="176" r="102" stroke="#D1E7DF" stroke-width="2"/>
+  <rect x="58" y="57" width="72" height="72" rx="19" fill="#142D4E"/>
+  <g transform="translate(58 57) scale(.140625)">
+    <path d="M373 162C344 120 294 100 245 110C172 124 121 187 121 257C121 337 184 402 264 402C323 402 375 366 395 316" stroke="#73E0C1" stroke-width="28" stroke-linecap="round"/>
+    <path d="M119 263H197L227 211L268 309L302 250H371" stroke="#F6F8FC" stroke-width="26" stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="382" cy="150" r="26" fill="#FF997A"/>
+  </g>
+  <text x="151" y="85" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Arial,sans-serif" font-size="20" font-weight="600" letter-spacing="2" fill="#42635E">LOCAL. LIGHT. YOURS.</text>
+  <text x="151" y="118" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Arial,sans-serif" font-size="18" fill="#52706B">RUNNING + SLEEP + RECOVERY</text>
+  <text x="58" y="199" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Arial,sans-serif" font-size="48" font-weight="700" letter-spacing="-1.5" fill="#142D4E">garmin-connect-skills</text>
+  <text x="60" y="247" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Arial,sans-serif" font-size="26" fill="#52647A">Your training, in context.</text>
+  <rect x="60" y="279" width="116" height="29" rx="14.5" fill="#E0E8F0"/>
+  <text x="80" y="299" font-family="Arial,sans-serif" font-size="13" font-weight="700" fill="#142D4E">CN FIRST</text>
+  <text x="194" y="299" font-family="Arial,sans-serif" font-size="13" fill="#52647A">NO EXTRA AI API · NO BACKGROUND SYNC</text>
+  <rect x="983" y="59" width="216" height="216" rx="52" fill="#142D4E"/>
+  <g transform="translate(983 59) scale(.421875)">
+    <path d="M373 162C344 120 294 100 245 110C172 124 121 187 121 257C121 337 184 402 264 402C323 402 375 366 395 316" stroke="#73E0C1" stroke-width="28" stroke-linecap="round"/>
+    <path d="M119 263H197L227 211L268 309L302 250H371" stroke="#F6F8FC" stroke-width="26" stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="382" cy="150" r="26" fill="#FF997A"/>
+  </g>
+  <rect x="953" y="244" width="296" height="45" rx="22.5" fill="#FFFFFF"/>
+  <circle cx="978" cy="267" r="5" fill="#298267"/>
+  <text x="995" y="273" font-family="Arial,sans-serif" font-size="16" fill="#142D4E">Small summaries. Clear sources.</text>
+</svg>

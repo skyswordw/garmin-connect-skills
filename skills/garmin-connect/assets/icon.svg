@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="none" role="img" aria-labelledby="title desc">
+  <title id="title">Garmin Connect Skills</title>
+  <desc id="desc">一条运动轨迹与恢复节律相连的线，深蓝背景、薄荷绿轨道和珊瑚色终点。</desc>
+  <rect width="512" height="512" rx="120" fill="#142D4E"/>
+  <path d="M373 162C344 120 294 100 245 110C172 124 121 187 121 257C121 337 184 402 264 402C323 402 375 366 395 316" stroke="#73E0C1" stroke-width="28" stroke-linecap="round"/>
+  <path d="M119 263H197L227 211L268 309L302 250H371" stroke="#F6F8FC" stroke-width="26" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="382" cy="150" r="26" fill="#FF997A"/>
+</svg>
