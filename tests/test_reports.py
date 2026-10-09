@@ -105,11 +105,11 @@ def test_report_sources_portable_hashes_and_no_overwrite(store, profile, tmp_pat
     output = tmp_path.resolve() / "export"
     path, markdown = publish_weekly(store, profile, START, END, selections, output=output)
     before = path.read_bytes()
-    manifest = json.loads((path.parent / "manifest.json").read_text())
+    manifest = json.loads((path.parent / "manifest.json").read_text(encoding="utf-8"))
     assert str(tmp_path) not in markdown + json.dumps(manifest)
     for reference in manifest["sources"]:
         source = path.parent / reference["path"]
-        snapshot = Snapshot.from_dict(json.loads(source.read_text()), profile)
+        snapshot = Snapshot.from_dict(json.loads(source.read_text(encoding="utf-8")), profile)
         assert snapshot.as_dict()["id"] == reference["id"]
     with pytest.raises(AppError) as exc:
         publish_weekly(store, profile, START, END, selections, output=output)
@@ -136,7 +136,9 @@ def test_failed_refresh_source_is_exported_with_old_success(store, profile, tmp_
     path, _ = publish_weekly(
         store, profile, START, END, selections, output=tmp_path.resolve() / "export"
     )
-    exported = json.loads((path.parent / "sources" / f"{attempt.as_dict()['id']}.json").read_text())
+    exported = json.loads(
+        (path.parent / "sources" / f"{attempt.as_dict()['id']}.json").read_text(encoding="utf-8")
+    )
     assert exported["status"] == "error" and exported["error"]["code"] == "NETWORK_ERROR"
 
 
@@ -159,8 +161,8 @@ def test_concurrent_export_cannot_replace_another_reports_sources(
     with pytest.raises(AppError) as exc:
         publish_weekly(store, profile, START, END, selections, output=output)
     assert exc.value.code == "REPORT_EXISTS"
-    assert (target / "manifest.json").read_text() == "existing sources"
-    assert (target / "weekly.md").read_text() == "existing report"
+    assert (target / "manifest.json").read_text(encoding="utf-8") == "existing sources"
+    assert (target / "weekly.md").read_text(encoding="utf-8") == "existing report"
 
 
 def test_failed_revision_publication_preserves_original_report(

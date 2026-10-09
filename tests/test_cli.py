@@ -12,8 +12,8 @@ def test_demo_and_doctor_do_not_need_account(tmp_path, capsys):
     info = json.loads(capsys.readouterr().out)
     assert info["fictional"] is True
     report = output / info["report"]
-    assert report.is_file() and "完全虚构" in report.read_text()
-    manifest = json.loads((report.parent / "manifest.json").read_text())
+    assert report.is_file() and "完全虚构" in report.read_text(encoding="utf-8")
+    manifest = json.loads((report.parent / "manifest.json").read_text(encoding="utf-8"))
     assert all(s["snapshot"]["provider"] == "fictional" for s in manifest["inputs"])
     assert not root.exists()
 

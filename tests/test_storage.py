@@ -55,9 +55,9 @@ def test_immutable_snapshot_hash_is_verified(store, profile):
     )[0]
     identifier = result.snapshot.as_dict()["id"]
     path = store.folder(profile) / "objects" / f"{identifier}.json"
-    raw = json.loads(path.read_text())
+    raw = json.loads(path.read_text(encoding="utf-8"))
     raw["data"]["duration_seconds"] = 999
-    path.write_text(json.dumps(raw))
+    path.write_text(json.dumps(raw), encoding="utf-8")
     with pytest.raises(AppError) as exc:
         store.load(profile, identifier)
     assert exc.value.code == "INPUT_MISMATCH"
